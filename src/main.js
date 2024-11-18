@@ -7,6 +7,14 @@ document.getElementById("postForm").addEventListener("submit", function (e) {
         document.getElementById("posts").prepend(post);
         document.getElementById("postContent").value = "";
     }
+    const users = [
+    { id: 1, username: "kullanici1" },
+    { id: 2, username: "kullanici2" },
+];
+
+console.log("Üyeler:");
+users.forEach(user => console.log(user));
+
 });
 
 // Giriş ve kayıt işlemleri (dummy).
