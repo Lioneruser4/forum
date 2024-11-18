@@ -3,76 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anonim Forum</title>
-    <link rel="stylesheet" href="/src/style.css">
+    <title>Kayıt ve Giriş</title>
+    <!-- CSS Bağlantısı -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Anonim Forum</h1>
-        <div id="auth">
-            <button id="loginBtn">Giriş Yap</button>
-            <button id="signupBtn">Kayıt Ol</button>
-        </div>
-    </header>
-    <main>
-        <section id="posts">
-            <!-- Gönderiler buraya gelecek -->
-        </section>
-        <form id="postForm">
-            <textarea id="postContent" placeholder="Bir şey yaz..." required></textarea>
-            <button type="submit">Paylaş</button>
-        </form>
-    </main>
-    <script src="/src/main.js"></script>
-</body>
-  <div class="menu">
-    <div class="form">
-        <ul class="tab-group">
-            <li class="tab active"><a href="#signup">Kayıt Ol</a></li>
-            <li class="tab"><a href="#login">Giriş Yap</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="signup">
-                <h1>Hemen kayıt ol</h1>
-                <form id="signupForm">
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <label>Adın<span class="req">*</span></label>
-                            <input type="text" id="firstName" required autocomplete="off" />
-                        </div>
-                        <div class="field-wrap">
-                            <label>Soyadın<span class="req">*</span></label>
-                            <input type="text" id="lastName" required autocomplete="off" />
-                        </div>
-                    </div>
-                    <div class="field-wrap">
-                        <label>E-Posta adresin<span class="req">*</span></label>
-                        <input type="email" id="email" required autocomplete="off" />
-                    </div>
-                    <div class="field-wrap">
-                        <label>Şifren<span class="req">*</span></label>
-                        <input type="password" id="password" required autocomplete="off" />
-                    </div>
-                    <button type="submit" class="button button-block">Hadi Kayıt Ol</button>
-                </form>
-            </div>
-            <div id="login">
-                <h1>Hesabına Giriş Yap</h1>
-                <form id="loginForm">
-                    <div class="field-wrap">
-                        <label>E-Posta adresin<span class="req">*</span></label>
-                        <input type="email" id="loginEmail" required autocomplete="off" />
-                    </div>
-                    <div class="field-wrap">
-                        <label>Şifren<span class="req">*</span></label>
-                        <input type="password" id="loginPassword" required autocomplete="off" />
-                    </div>
-                    <p class="forgot"><a href="#">Şifremi Unuttum</a></p>
-                    <button type="submit" class="button button-block">Giriş Yap</button>
-                </form>
+    <!-- Ayarlar Çubuğu -->
+    <div class="settings-bar">
+        <button id="themeToggle" class="icon-btn">🌞</button>
+        <select id="languageSelector" class="language-dropdown">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="az">Azərbaycan</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
+
+    <!-- Kayıt ve Giriş Menüsü -->
+    <div class="menu">
+        <div class="form">
+            <ul class="tab-group">
+                <li class="tab active"><a href="#signup">Kayıt Ol</a></li>
+                <li class="tab"><a href="#login">Giriş Yap</a></li>
+            </ul>
+            <div class="tab-content">
+                <!-- Kayıt Formu -->
+                <div id="signup">
+                    <h1>Hemen Kayıt Ol</h1>
+                    <form id="signupForm">
+                        <label for="username">Kullanıcı Adı</label>
+                        <input type="text" id="username" name="username" placeholder="Kullanıcı adı" required>
+                        
+                        <label for="password">Şifre</label>
+                        <input type="password" id="password" name="password" placeholder="Şifre" required>
+                        
+                        <button type="submit" class="btn">Kayıt Ol</button>
+                    </form>
+                </div>
+                <!-- Giriş Formu -->
+                <div id="login">
+                    <h1>Giriş Yap</h1>
+                    <form id="loginForm">
+                        <label for="loginUsername">Kullanıcı Adı</label>
+                        <input type="text" id="loginUsername" name="loginUsername" placeholder="Kullanıcı adı" required>
+                        
+                        <label for="loginPassword">Şifre</label>
+                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Şifre" required>
+                        
+                        <button type="submit" class="btn">Giriş Yap</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- JavaScript Bağlantısı -->
+    <script src="assets/js/main.js" defer></script>
+</body>
 </html>
