@@ -25,3 +25,22 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 document.getElementById("signupBtn").addEventListener("click", () => {
     alert("Kayıt olma özelliği ekleniyor!");
 });
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    console.log("Kayıt olundu:", { firstName, lastName, email });
+    alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+});
+
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    console.log("Giriş yapıldı:", { email });
+    alert("Giriş başarılı! Profilinize yönlendiriliyorsunuz.");
+});
