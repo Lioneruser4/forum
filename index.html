@@ -1,23 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kayıt ve Giriş</title>
-    <!-- CSS Bağlantısı -->
+    <title>Forum</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Ayarlar Çubuğu -->
-    <div class="settings-bar">
-        <button id="themeToggle" class="icon-btn">🌞</button>
-        <select id="languageSelector" class="language-dropdown">
-            <option value="en">English</option>
-            <option value="tr">Türkçe</option>
-            <option value="az">Azərbaycan</option>
-            <option value="ru">Русский</option>
-        </select>
+    <!-- Ana Sayfa İçeriği -->
+    <div class="container">
+        <div class="navbar">
+            <button id="signupBtn" class="btn">Kayıt Ol</button>
+            <button id="loginBtn" class="btn">Giriş Yap</button>
+        </div>
+        <div id="content">
+            <h1>Hoşgeldiniz</h1>
+            <p>Forumumuza giriş yapmak veya kayıt olmak için yukarıdaki butonları kullanın.</p>
+        </div>
     </div>
+
+    <!-- Kayıt ve Giriş Pop-up'ları -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <div id="signupForm" class="form">
+                <h2>Kayıt Ol</h2>
+                <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="password" placeholder="Şifre" required>
+                <button id="registerBtn">Kayıt Ol</button>
+            </div>
+            <div id="loginForm" class="form">
+                <h2>Giriş Yap</h2>
+                <input type="text" id="loginUsername" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="loginPassword" placeholder="Şifre" required>
+                <button id="loginSubmitBtn">Giriş Yap</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
 
     <!-- Kayıt ve Giriş Menüsü -->
     <div class="menu">
